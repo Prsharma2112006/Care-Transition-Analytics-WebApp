@@ -18,7 +18,7 @@ This project reframes public operational records from simple aggregate counts in
 
 ## 📂 Repository Structure
 
-```
+```text
 Care-Transition-Analytics-WebApp/
 ├── .streamlit/
 │   └── config.toml                                  # Streamlit UI configuration
@@ -59,7 +59,7 @@ Care-Transition-Analytics-WebApp/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/Care-Transition-Analytics-WebApp.git
+   git clone [https://github.com/Prsharma2112006/Care-Transition-Analytics-WebApp.git](https://github.com/Prsharma2112006/Care-Transition-Analytics-WebApp.git)
    cd Care-Transition-Analytics-WebApp
    ```
 
@@ -88,7 +88,7 @@ Care-Transition-Analytics-WebApp/
 
 When deploying via [Streamlit Community Cloud](https://share.streamlit.io/):
 
-- **Repository:** `<your-username>/Care-Transition-Analytics-WebApp`
+- **Repository:** `Prsharma2112006/Care-Transition-Analytics-WebApp`
 - **Branch:** `main`
 - **Main file path:** `app.py`
 
