@@ -11,8 +11,10 @@ This project reframes public operational records from simple aggregate counts in
 
 ## 🌐 Live Application
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)  
-*(Update with your live Streamlit Cloud URL once deployed)*
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://care-transition-analytics-app.streamlit.app/)
+
+The interactive dashboard is deployed on Streamlit Community Cloud:  
+👉 **[care-transition-analytics-app.streamlit.app](https://care-transition-analytics-app.streamlit.app/)**
 
 ---
 
@@ -20,14 +22,17 @@ This project reframes public operational records from simple aggregate counts in
 
 ```text
 Care-Transition-Analytics-WebApp/
-├── .streamlit/
-│   └── config.toml                                  # Streamlit UI configuration
-├── data/
-│   └── HHS_Unaccompanied_Alien_Children_Program.csv # Longitudinal operational dataset (2023–2025)
-├── app.py                                           # Streamlit dashboard application & analytics engine
+├── app/
+│   └── uac_app/
+│       ├── .streamlit/
+│       │   └── config.toml                          # Streamlit UI theme and server configuration
+│       ├── data/
+│       │   └── HHS_Unaccompanied_Alien_Children_Program.csv # Longitudinal operational dataset (2023–2025)
+│       └── app.py                                   # Streamlit dashboard application & analytics engine
+├── UAC_Care_Transition_Analysis.ipynb               # Exploratory data analysis & prototyping notebook
 ├── requirements.txt                                 # Production dependencies
-├── .gitignore                                       # Git ignore configurations (venv, caches)
-└── README.md                                        # Project documentation
+├── .gitignore                                       # Git ignore rules (venv, bytecode, runtime cache)
+└── README.md                                        # Project documentation & operational KPI dictionary
 ```
 
 ---
@@ -79,31 +84,33 @@ Care-Transition-Analytics-WebApp/
 
 4. **Launch the dashboard:**
    ```bash
-   streamlit run app.py
+   streamlit run app/uac_app/app.py
    ```
 
 ---
 
 ## 🚀 Deployment (Streamlit Community Cloud)
 
-When deploying via [Streamlit Community Cloud](https://share.streamlit.io/):
+This application is deployed via [Streamlit Community Cloud](https://share.streamlit.io/):
 
 - **Repository:** `Prsharma2112006/Care-Transition-Analytics-WebApp`
 - **Branch:** `main`
-- **Main file path:** `app.py`
+- **Main file path:** `app/uac_app/app.py`
+- **Live URL:** [care-transition-analytics-app.streamlit.app](https://care-transition-analytics-app.streamlit.app/)
 
 ---
 
 ## 📈 Data Governance & Source
 
-- **Source:** U.S. Department of Health and Human Services (HHS) Unaccompanied Alien Children Program daily reports.
+- **Source:** U.S. Department of Health and Human Services (HHS) Unaccompanied Alien Children Program operational releases.
 - **Coverage:** January 2023 – December 2025.
-- **Metrics Tracked:** Apprehensions, CBP custody counts, transfers to HHS care, active HHS bed capacity, and discharges to sponsors.
+- **Metrics Tracked:** Apprehensions, CBP custody counts, transfers to HHS care, active HHS bed capacity, and sponsor reunification discharges.
 
 ---
 
 ## 📋 Project Deliverables
 
-- [x] Streamlit analytics dashboard (`app.py`)
-- [ ] Exploratory Data Analysis & statistical reporting
-- [ ] Policy insights and recommendations summary
+- [x] Streamlit analytics dashboard (`app/uac_app/app.py`)
+- [x] Streamlit Community Cloud production deployment
+- [x] Exploratory Data Analysis & statistical reporting (`UAC_Care_Transition_Analysis.ipynb`)
+- [ ] Policy insights and recommendations executive briefing
